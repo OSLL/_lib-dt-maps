@@ -15,8 +15,21 @@ from dt_maps.types.tiles import Tile
 from dt_maps.types.frames import Frame
 from dt_maps.types.tile_maps import TileMap
 from dt_maps.types.watchtowers import Watchtower
+from dt_maps.types.vehicles import Vehicle
+from dt_maps.types.citizens import Citizen
+from dt_maps.types.traffic_signs import TrafficSign
 
 logging.basicConfig()
+
+REGISTER = {
+    "frames": Frame,
+    "watchtowers": Watchtower,
+    "tiles": Tile,
+    "tile_maps": TileMap,
+    "citizens": Citizen,
+    "vehicles": Vehicle,
+    "traffic_signs": TrafficSign
+}
 
 
 class Map:
@@ -145,9 +158,7 @@ class Map:
 
         # register type converters for known layers
         register = lambda l, t: m.layers.get(l).register_entity_helper(t) if m.layers.has(l) else 0
-        register("frames", Frame)
-        register("tile_maps", TileMap)
-        register("tiles", Tile)
-        register("watchtowers", Watchtower)
+        for layer_name in REGISTER:
+            register(layer_name, REGISTER[layer_name])
         # ---
         return m
