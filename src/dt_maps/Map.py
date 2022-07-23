@@ -18,6 +18,7 @@ from dt_maps.types.watchtowers import Watchtower
 from dt_maps.types.vehicles import Vehicle
 from dt_maps.types.citizens import Citizen
 from dt_maps.types.traffic_signs import TrafficSign
+from dt_maps.types.ground_tags import GroundTag
 
 logging.basicConfig()
 
@@ -28,7 +29,8 @@ REGISTER = {
     "tile_maps": TileMap,
     "citizens": Citizen,
     "vehicles": Vehicle,
-    "traffic_signs": TrafficSign
+    "traffic_signs": TrafficSign,
+    "ground_tags": GroundTag
 }
 
 
