@@ -10,7 +10,7 @@ FAMILY = "family"
 
 
 class TrafficSignType(Enum):
-    FOUR_WAY_INTERSECT = "four-way-intersect"
+    FOUR_WAY_INTERSECT = "four_way_intersect"
     DO_NOT_ENTER = "do_not_enter"
     DUCK_CROSSING = "duck_crossing"
     LEFT_T_INTERSECT = "left_t_intersect"
