@@ -24,8 +24,8 @@ logging.basicConfig()
 
 REGISTER = {
     "frames": Frame,
-    "watchtowers": Watchtower,
     "tiles": Tile,
+    "watchtowers": Watchtower,
     "tile_maps": TileMap,
     "citizens": Citizen,
     "vehicles": Vehicle,
